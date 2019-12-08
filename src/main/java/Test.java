@@ -1,18 +1,14 @@
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 
 public class Test {
     public static void main(String[] args) {
 
         User user = new User();
+        user.setId(10);
         user.setName("nihao");
-        System.out.println(user);
-        System.out.println(JSON.toJSONString(user));
-        System.out.println(JSON.toJSON(user));
+        user.setSex(false);
 
-        JSONObject jsonObject = (JSONObject) JSON.toJSON(user);
-        Object name = jsonObject.get("name");
-        System.out.println(name);
+        System.out.println(JSON.toJSONString(user));
     }
 
 
